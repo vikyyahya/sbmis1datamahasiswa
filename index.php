@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>Data Mahasiswa</title>
-    <link rel="icon" href="http://www.petanikode.com/favicon.ico" />
+    
 </head>
 <body>
 
 <?php
 
 
-$koneksi = mysqli_connect("localhost","root","","dbMahasiswa") or die(mysqli_error());
+$koneksi = mysqli_connect("takcodingwebappserver.database.windows.net","viky","","dbMahasiswa") or die(mysqli_error());
 
 
 function tambah($koneksi){
