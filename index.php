@@ -70,8 +70,9 @@ function tambah($koneksi){
 
 
 function tampil_data($koneksi){
-    $sql = "SELECT * FROM mahasiswa";
-    $query = mysqli_query($koneksi, $sql);
+    
+     $query = $koneksi->prepare("SELECT * FROM mahasiswa");
+     $query -> execute();
     
     echo "<fieldset>";
     echo "<legend><h2>Data Mahasiswa</h2></legend>";
@@ -86,7 +87,7 @@ function tampil_data($koneksi){
             <th>Tindakan</th>
           </tr>";
     
-    while($data = mysqli_fetch_array($query)){
+    while($data =  $query->fetchObject()){
         ?>
             <tr>
                 <td><?php echo $data['nim']; ?></td>
