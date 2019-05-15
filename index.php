@@ -162,7 +162,7 @@ function ubah($koneksi){
                 <label>hobi <input type="text" name="hobi" value="<?php echo $_GET['hobi'] ?>"/></label> <br>
                 <br>
                 <label>
-                    <input type="submit" name="btn_ubah" value="Simpan Perubahan"/> atau <a href="index.php?aksi=delete&id=<?php echo $_GET['id'] ?>"> (x) Hapus data ini</a>!
+                    <input type="submit" name="btn_ubah" value="Simpan Perubahan"/> atau <a href="index.php?aksi=delete&id=<?php echo $_GET['nim'] ?>"> (x) Hapus data ini</a>!
                 </label>
                 <br>
                 <p><?php echo isset($pesan) ? $pesan : "" ?></p>
