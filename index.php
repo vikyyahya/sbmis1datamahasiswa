@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dataa Mahasiswa</title>
+    <title>Data Mahasiswa</title>
     
 </head>
 <body>
@@ -9,7 +9,7 @@
 <?php
 echo "hallo word";
 
-$koneksi = mysqli_connect("https://submis1datamahasiswa.azurewebsites.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa") or die(mysqli_error());
+$koneksi = mysqli_connect("https://submis1datamahasiswa.azurewebsites.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa");
 if ($koneksi)
 {
     echo "berhasil";
