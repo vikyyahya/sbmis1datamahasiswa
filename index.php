@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dataa Mahasiswa</title>
+    <title>Data Mahasiswa</title>
     
 </head>
 <body>
@@ -13,13 +13,13 @@
     $user = "viky";
     $pass = "aaaaaatakcodingwebappserverA1";
     $db = "dbMahasiswa";
-//     try {
-//         $koneksi = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
-//         $koneksi->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-//     } catch(Exception $e) {
-//         echo "Failed: " . $e;
-//     }
-    $koneksi = mysqli_connect("takcodingwebappserver.database.windows.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa") or die(mysqli_error());
+    try {
+        $koneksi = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
+        $koneksi->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    } catch(Exception $e) {
+        echo "Failed: " . $e;
+    }
+//     $koneksi = mysqli_connect("takcodingwebappserver.database.windows.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa") or die(mysqli_error());
     
 function tambah($koneksi){
     
