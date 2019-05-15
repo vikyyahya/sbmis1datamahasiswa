@@ -128,7 +128,10 @@ function ubah($koneksi){
             $perubahan = "nama='".$nama."',jenisKelamin='".$jenisKelamin."',alamat='".$alamat."',hobi='".$hobi."'";
             $sql_update = "UPDATE mahasiswa SET ".$perubahan." WHERE nim=$nim";
 
-            $update = mysqli_query($koneksi, $sql_update);
+            $update = $koneksi->prepare($sql_update);
+            $update-> execute();
+
+            
 
             if($update && isset($_GET['aksi'])){
                 if($_GET['aksi'] == 'update'){
@@ -176,7 +179,10 @@ function hapus($koneksi){
     if(isset($_GET['nim']) && isset($_GET['aksi'])){
         $nim = $_GET['nim'];
         $sql_hapus = "DELETE FROM mahasiswa WHERE nim=" . $nim;
-        $hapus = mysqli_query($koneksi, $sql_hapus);
+        
+
+        $hapus = $koneksi->prepare($sql_hapus);
+        $hapus-> execute();
         
         if($hapus){
             if($_GET['aksi'] == 'delete'){
