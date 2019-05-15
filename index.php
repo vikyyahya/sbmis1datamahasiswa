@@ -9,7 +9,7 @@
 <?php
 
 
-$koneksi = mysqli_connect("takcodingwebappserver.database.windows.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa") or die(mysqli_error());
+$koneksi = mysqli_connect("https://submis1datamahasiswa.azurewebsites.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa") or die(mysqli_error());
 
 
 function tambah($koneksi){
