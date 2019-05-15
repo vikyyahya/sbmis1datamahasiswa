@@ -8,9 +8,16 @@
 
 <?php
 echo "hallo word";
-
-$koneksi = mysql_connect("https://submis1datamahasiswa.azurewebsites.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa");
-if ($koneksi)
+try {
+    $conn = new PDO("sqlsrv:server = tcp:takcodingwebappserver.database.windows.net,1433; Database = dbMahasiswa", "viky", "{aaaaaatakcodingwebappserverA1}");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
+    
+if ($conn)
 {
     echo "berhasil";
 }else{
