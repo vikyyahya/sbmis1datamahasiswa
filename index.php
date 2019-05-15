@@ -32,8 +32,13 @@ function tambah($koneksi){
         
         if(!empty($nama) && !empty($jenisKelamin) && !empty($alamat) && !empty($hobi)){
             $sql = "INSERT INTO mahasiswa (nim,nama,jenisKelamin, alamat,hobi) VALUES(".$nim.",'".$nama."','".$jenisKelamin."','".$alamat."','".$hobi."')";
-            $simpan = mysqli_query($koneksi, $sql);
-            if($simpan && isset($_GET['aksi'])){
+            
+            
+            $query = $koneksi->prepare($sql);
+            $query -> execute();
+            
+            
+            if($query && isset($_GET['aksi'])){
                 if($_GET['aksi'] == 'create'){
                     header('location: index.php');
                 }
