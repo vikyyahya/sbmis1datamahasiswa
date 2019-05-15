@@ -9,7 +9,7 @@
 <?php
 echo "hallo word";
 
-$koneksi = mysqli_connect("https://submis1datamahasiswa.azurewebsites.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa");
+$koneksi = mysql_connect("https://submis1datamahasiswa.azurewebsites.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa");
 if ($koneksi)
 {
     echo "berhasil";
