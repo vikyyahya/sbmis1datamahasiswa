@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Mahasiswa</title>
+    <title>Dataa Mahasiswa</title>
     
 </head>
 <body>
@@ -9,8 +9,16 @@
 <?php
 echo "hallo word";
 
-    $conn = mysqli_connect ("takcodingwebappserver.database.windows.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa") or die(mysqli_error());
-    
+    $host = "takcodingwebappserver.database.windows.net";
+    $user = "viky";
+    $pass = "aaaaaatakcodingwebappserverA1";
+    $db = "dbMahasiswa";
+    try {
+        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    } catch(Exception $e) {
+        echo "Failed: " . $e;
+    }
     
 if ($conn)
 {
