@@ -7,7 +7,7 @@
 <body>
 
 <?php
-echo "hallo word";
+
 
     $host = "takcodingwebappserver.database.windows.net";
     $user = "viky";
@@ -20,12 +20,6 @@ echo "hallo word";
         echo "Failed: " . $e;
     }
     
-if ($koneksi)
-{
-    echo "berhasil";
-}else{
-    echo "gagal";
-}
     
 function tambah($koneksi){
     
