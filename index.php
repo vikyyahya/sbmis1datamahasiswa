@@ -157,8 +157,8 @@ function ubah($koneksi){
                 <input type="hidden" name="nim" value="<?php echo $_GET['nim'] ?>"/>
                 
                 <label>nama <input type="text" name="nama" value="<?php echo $_GET['nama'] ?>"/></label> <br>
-                <label>jenisKelamin <input type="text" name="jenisKelamin" value="<?php echo $_GET['jenisKelamin'] ?>"/> kg</label><br>
-                <label>alamat<input type="text" name="alamat" value="<?php echo $_GET['alamat'] ?>"/> bulan</label> <br>
+                <label>jenisKelamin <input type="text" name="jenisKelamin" value="<?php echo $_GET['jenisKelamin'] ?>"/> </label><br>
+                <label>alamat<input type="text" name="alamat" value="<?php echo $_GET['alamat'] ?>"/></label> <br>
                 <label>hobi <input type="text" name="hobi" value="<?php echo $_GET['hobi'] ?>"/></label> <br>
                 <br>
                 <label>
