@@ -10,7 +10,11 @@
 
 
 $koneksi = mysqli_connect("https://submis1datamahasiswa.azurewebsites.net","viky","aaaaaatakcodingwebappserverA1","dbMahasiswa") or die(mysqli_error());
-
+if($koneksi){
+ echo "berhasil";   
+}else{
+echo "gagal";
+}
 
 function tambah($koneksi){
     
