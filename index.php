@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Mahasiswa</title>
+    <title>Dataa Mahasiswa</title>
     
 </head>
 <body>
