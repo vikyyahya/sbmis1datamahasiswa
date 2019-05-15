@@ -90,11 +90,11 @@ function tampil_data($koneksi){
     while($data =  $query->fetchObject()){
         ?>
             <tr>
-                <td><?php echo $data['nim']; ?></td>
-                <td><?php echo $data['nama']; ?></td>
-                <td><?php echo $data['jenisKelamin']; ?></td>
-                <td><?php echo $data['alamat']; ?> </td>
-                <td><?php echo $data['hobi']; ?></td>
+                <td><?php echo $data->nim ?></td>
+                <td><?php echo $data->nama ?></td>
+                <td><?php echo $data->jenisKelamin ?></td>
+                <td><?php echo $data->alamat ?> </td>
+                <td><?php echo $data->hobi ?></td>
                 <td>
                     <a href="index.php?aksi=update&nim=<?php echo $data['nim']; ?>&nama=<?php echo $data['nama']; ?>&jenisKelamin=<?php echo $data['jenisKelamin']; ?>&alamat=<?php echo $data['alamat']; ?>&hobi=<?php echo $data['hobi']; ?>">Ubah</a> |
                     <a href="index.php?aksi=delete&nim=<?php echo $data['nim']; ?>">Hapus</a>
